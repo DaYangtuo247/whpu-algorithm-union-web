@@ -1,0 +1,277 @@
+.main {
+    width: 1600px;
+    height: 100vh;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.main .banner {
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    width: 1000px;
+    height: 500px;
+    background-color: white;
+    margin-right: 36px;
+    margin-bottom: 36px;
+    border-radius: 30px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 10px #d7d7d7;
+}
+
+.main .banner div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main .service {
+    float: left;
+    width: 564px;
+}
+
+
+
+.main .service li {
+    background-color: white;
+    position: relative;
+    float: left;
+    width: 176px;
+    height: 123px;
+    margin-right: 18px;
+    margin-bottom: 18px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px #d7d7d7;
+}
+
+.main .service li p {
+    margin-right: 70px;
+    margin-top: 5px;
+    font: 32px "微软雅黑";
+    text-align: right;
+}
+
+.main .service li:nth-child(3n) {
+    margin-right: 0px;
+}
+
+.main .service li h3 {
+    color: #555555;
+    margin-top: 18px;
+    margin-left: 30px;
+}
+
+.main .service li i {
+    color: #7c7c7c;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    font-size: 36px;
+    transform: translateY(-50%);
+    user-select: none;
+}
+
+.main .schedule {
+    position: relative;
+    float: left;
+    width: 564px;
+    height: 200px;
+    background-color: white;
+    border-radius: 30px;
+    margin-bottom: 36px;
+    box-shadow: 0px 0px 10px #d7d7d7;
+}
+
+.main .schedule .calendar {
+    position: relative;
+    float: left;
+    left: 0px;
+    width: 220px;
+    height: 100%;
+    color: #396a42;
+    cursor: default;
+}
+
+.main .schedule .calendar .month,
+.main .schedule .calendar .week {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    writing-mode: vertical-lr;
+}
+
+.main .schedule .calendar .month {
+    left: 20px;
+}
+
+.main .schedule .calendar .month-today {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font: 110px "微软雅黑";
+}
+
+.main .schedule .calendar .week {
+    right: 7px;
+}
+
+.main .schedule .count-down {
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    width: 344px;
+    height: 200px;
+    padding: 20px 22px;
+    overflow: hidden;
+}
+
+.main .schedule .count-down li {
+    box-sizing: border-box;
+    padding-left: 12px;
+    background-color: rgb(230, 244, 255);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: #417074;
+    font: 16px/32px "微软雅黑";
+}
+
+.main .content {
+    margin-top: 40px;
+}
+
+.main .content .recent,
+.main .ranking-hot {
+    float: left;
+    border-radius: 30px;
+    margin-bottom: 45px;
+    background-color: white;
+}
+
+.main .content .recent h2,
+.main .ranking-hot h2 {
+    color: #555555;
+    margin-bottom: 2px;
+}
+
+.main .content .recent {
+    width: 1000px;
+    height: 530px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    margin-right: 36px;
+    box-shadow: 0px 0px 10px #d7d7d7;
+}
+
+.main .content .recent-data {
+    margin-top: 10px;
+}
+
+.main .content .recent-data>li {
+    position: relative;
+    width: 220px;
+    float: left;
+    height: 130px;
+    margin: 0px auto 5px;
+    overflow: hidden;
+    margin-right: 20px;
+    margin-bottom: 28px;
+    border-radius: 15px;
+    border: 1px solid #9d9d9d0d;
+    box-sizing: border-box;
+    background: #f5f5f58a;
+    box-shadow: 0px 0px 4px #8d8d8d33;
+}
+
+.main .content .recent-data>li:hover {
+    background: #f5f5f5ee;
+    box-shadow: 0px 0px 4px #8d8d8d70;
+}
+
+.main .content .recent-data>li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.main .content .recent-data>li a {
+    display: block;
+    color: #0000009e;
+    height: 130px;
+}
+
+.main .content .recent-data>li .tag {
+    position: absolute;
+    right: 8px;
+    top: 7px;
+    background-color: #2490efbf;
+    border-radius: 6px;
+    padding: 2px 5px;
+    color: white;
+}
+
+.main .content .recent-data>li h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0px 16px;
+}
+
+.main .content .recent-data>li .describe {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0px 30px;
+}
+
+.main .content .recent-data>li img {
+    padding: 5px 16px;
+    width: 35px;
+    border-radius: 50%;
+}
+
+.main .ranking-hot {
+    width: 564px;
+    height: 530px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px #d7d7d7;
+}
+
+.main .content .recent-data>li .rests {
+    position: absolute;
+    bottom: 5px;
+    right: 12px;
+    font-size: 10px;
+}
+
+.main .content .recent-data>li .rests li {
+    float: left;
+    margin-left: 5px;
+}
+
+.main .ranking-hot .ranking-hot-data {
+    padding-left: 15px;
+    width: 100%;
+}
+
+.main .ranking-hot .ranking-hot-data tr {
+    text-align: center;
+    color: #303030;
+}
+
+.main .ranking-hot .ranking-hot-data .user,
+.main .ranking-hot .ranking-hot-data .user span {
+    font: 16px/40px "微软雅黑";
+    vertical-align: middle;
+}
+
+.main .ranking-hot .ranking-hot-data .user img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+
+.main .ranking-hot .ranking-hot-data .user .username {
+    text-align: left;
+}

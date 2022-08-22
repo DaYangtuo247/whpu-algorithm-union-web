@@ -1,0 +1,181 @@
+li {
+    list-style: none;
+}
+
+.show {
+    position: unset;
+    width: 1400px;
+}
+
+.userinfo li input,
+.userinfo li img,
+.userinfo li span {
+    vertical-align: middle;
+}
+
+.userinfo li img {
+    width: 50px;
+    height: 50px;
+}
+
+.userinfo li div.introduce {
+    vertical-align: top;
+    min-width: 260px;
+    max-width: 260px;
+    min-height: 120px;
+    max-height: 240px;
+}
+
+.userinfo li input[type="text"] {
+    width: 260px;
+}
+
+.userinfo li span {
+    display: inline-block;
+    width: 140px;
+    border: 1px solid;
+}
+
+.personal-info {
+    box-sizing: border-box;
+    position: relative;
+    width: 1400px;
+    margin: 0px auto;
+    margin-top: 15px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 45px 50px 0px;
+    box-shadow: 0px 0px 10px #d7d7d7;
+}
+
+.personal-info .sonNav {
+    box-sizing: border-box;
+    float: left;
+    width: 200px;
+    min-height: 600px;
+    border-radius: 30px;
+    background-color: #a4bbd5;
+    padding-top: 15px;
+    text-align: center;
+    box-shadow: 0px 0px 10px #d7d7d7;
+}
+
+.personal-info .sonNav li {
+    width: 130px;
+    height: 30px;
+    margin: 15px auto;
+    background-color: rgba(255, 255, 255, 0.616);
+    border-radius: 25px;
+    line-height: 30px;
+}
+
+.personal-info .content {
+    box-sizing: border-box;
+    float: left;
+    width: 1000px;
+    margin-left: 75px;
+}
+
+.personal-info .content ul {
+    padding: 40px 50px;
+    margin-bottom: 45px;
+    border-radius: 30px;
+    background-color: #a4bbd5;
+    box-shadow: 0px 0px 10px #d7d7d7;
+}
+
+.personal-info .content .myinfo-head li {
+    float: left;
+    text-align: center;
+}
+
+.personal-info .content .myinfo-head .info-left {
+    width: 200px;
+    margin-right: 40px;
+}
+
+.personal-info .content .myinfo-head .info-left .headimg {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    border: 10px solid white;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.personal-info .content .myinfo-head .info-left .headimg input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    opacity: 0;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.personal-info .content .myinfo-head .info-left .headimg .edit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    width: 44px;
+    height: auto;
+    z-index: 2;
+}
+
+.personal-info .content .myinfo-head .info-left .headimg:hover .edit {
+    display: block;
+}
+
+.personal-info .content .myinfo-head .info-left .headimg:hover .headimgsrc {
+    opacity: 0.8;
+}
+
+.personal-info .content .myinfo-head .info-left .headimg .headimgsrc {
+    width: 100%;
+    object-fit: cover;
+}
+
+.personal-info .content .myinfo-head .info-left p {
+    font: 22px/1 "微软雅黑";
+    font-weight: 700;
+    margin-top: 22px;
+}
+
+.personal-info .content .myinfo-head .info-right {
+    width: 660px;
+    margin-top: -10px;
+}
+
+.personal-info .content .myinfo-head .info-right p {
+    text-align: left;
+    font: 16px/1.8 "微软雅黑";
+    font-weight: 700;
+}
+
+.personal-info .content .myinfo-head .info-right div.introduce {
+    box-sizing: border-box;
+    min-width: 660px;
+    max-width: 660px;
+    min-height: 215px;
+    max-height: 215px;
+    border-radius: 30px;
+    font: 16px "微软雅黑";
+    padding: 15px 20px;
+    background-color: #ffffff7d;
+    vertical-align: middle;
+    border: 0px;
+    text-align: left;
+}
+
+.personal-info .content .myinfo-body li {
+    height: 30px;
+}
+
+.personal-info .content .myinfo-body span {
+    font-size: 16px;
+}

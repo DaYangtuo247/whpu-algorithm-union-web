@@ -1,0 +1,48 @@
+.nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 60px;
+    background-color: #1E88E5;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.nav ul {
+    margin-top: 110px;
+    text-align: center;
+}
+
+.nav a {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+
+.nav>ul li {
+    color: white;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font: 16px "微软雅黑";
+    user-select: none;
+}
+
+.nav>ul li a p {
+    padding: 5px 0px;
+}
+
+.nav>ul li a p:hover {
+    filter: drop-shadow(0px 0px 4px #0000008c);
+}
+
+.nav>ul li a p.active {
+    background-color: #0978d9;
+}
+
+.nav>ul li a p span {
+    display: block;
+    height: 38px;
+    width: 100%;
+}

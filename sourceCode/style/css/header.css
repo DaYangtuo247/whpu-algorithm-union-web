@@ -1,0 +1,419 @@
+.changeModal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #696f72db;
+    z-index: 50;
+}
+
+.changeModal ul.modal-content .quit {
+    position: absolute;
+    color: #667c99;
+    top: 14px;
+    right: 14px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.changeModal ul.modal-content .quit:hover {
+    color: #465a75;
+}
+
+.changeModal .modal-content {
+    display: none;
+    position: relative;
+    margin: 0px auto;
+    margin-top: 180px;
+    width: 0px;
+    background-color: white;
+    box-shadow: 0 7px 15px rgb(0 0 0 / 35%);
+    border-radius: 15px;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.changeModal .modal-content h3 {
+    color: #111;
+    font: 26px "微软雅黑";
+    text-align: center;
+    padding: 25px;
+    /*强制一行显示*/
+    white-space: nowrap;
+}
+
+.changeModal .modal-content .register {
+    display: none;
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.changeModal .modal-content .loadings {
+    position: absolute;
+    display: none;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    background-color: #e8ecf34a;
+    z-index: 5;
+    margin: 0;
+}
+
+.loading {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    color: #5684c5;
+    left: -100px;
+    animation: shadowRolling 2s linear infinite;
+}
+
+@keyframes shadowRolling {
+    0% {
+        box-shadow: 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0),
+            0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+    }
+
+    12% {
+        box-shadow: 100px 0 #5684c5, 0px 0 rgba(255, 255, 255, 0),
+            0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+    }
+
+    25% {
+        box-shadow: 110px 0 #5684c5, 100px 0 #5684c5, 0px 0 rgba(255, 255, 255, 0),
+            0px 0 rgba(255, 255, 255, 0);
+    }
+
+    36% {
+        box-shadow: 120px 0 #5684c5, 110px 0 #5684c5, 100px 0 #5684c5,
+            0px 0 rgba(255, 255, 255, 0);
+    }
+
+    50% {
+        box-shadow: 130px 0 #5684c5, 120px 0 #5684c5, 110px 0 #5684c5, 100px 0 #5684c5;
+    }
+
+    62% {
+        box-shadow: 200px 0 rgba(255, 255, 255, 0), 130px 0 #5684c5, 120px 0 #5684c5,
+            110px 0 #5684c5;
+    }
+
+    75% {
+        box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0),
+            130px 0 #5684c5, 120px 0 #5684c5;
+    }
+
+    87% {
+        box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0),
+            200px 0 rgba(255, 255, 255, 0), 130px 0 #5684c5;
+    }
+
+    100% {
+        box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0),
+            200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0);
+    }
+}
+
+.changeModal .modal-content ul {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 310px;
+    padding: 22px 30px 25px;
+    background-color: #e8ecf3;
+}
+
+.changeModal .modal-content ul li {
+    margin-top: 15px;
+}
+
+.changeModal .modal-content ul li label {
+    cursor: pointer;
+}
+
+.changeModal .modal-content ul .github-login {
+    margin-top: 0;
+    text-align: center;
+}
+
+.changeModal .modal-content ul>li>input {
+    color: #111;
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    padding: 15px 20px;
+    text-align: center;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    box-shadow: 0px 1px 2px 1px #d5d5d58c;
+}
+
+.changeModal .modal-content ul li .github {
+    box-sizing: content-box;
+    color: #333;
+    width: 154px;
+    height: 24px;
+    font-size: 14px;
+    line-height: 1;
+    padding: 2px 4px;
+    background: #ccc;
+}
+
+.changeModal .modal-content ul li .github:active {
+    background-color: #b3b3b3;
+    box-shadow: 0;
+    outline: none;
+}
+
+.changeModal .modal-content ul li input[type="checkbox"] {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.changeModal .modal-content ul li span {
+    font-size: 10px;
+}
+
+.changeModal .modal-content ul li input[type="button"] {
+    color: #fff;
+    background-color: #4d698e;
+    padding: 0;
+    cursor: pointer;
+}
+
+.changeModal .modal-content ul li input[type="button"]:hover {
+    background-color: #4a6c9b;
+}
+
+.changeModal .modal-content ul li input[type="button"]:active {
+    background-color: #3b516d;
+    box-shadow: inset 0 3px 5px rgb(0 0 0 / 13%);
+    outline: none;
+}
+
+.changeModal .modal-content ul li input:focus {
+    border-color: #4d698e;
+    outline: none;
+}
+
+.changeModal .modal-content .modal-content-footer {
+    padding: 10px;
+}
+
+
+.changeModal .modal-content a {
+    cursor: pointer;
+    color: #426799;
+}
+
+.changeModal .modal-content a:hover {
+    text-decoration: underline;
+}
+
+.changeModal .modal-content p {
+    line-height: 31px;
+    text-align: center;
+    /*强制一行显示*/
+    white-space: nowrap;
+}
+
+.header {
+    position: sticky;
+    /* header粘性定位的启用需要其父级元素可以容纳该元素，例如body的高度要为100vh */
+    top: 0px;
+    min-width: 1600px;
+    height: 40px;
+    z-index: 20;
+    padding: 15px 0px;
+    background-color: white;
+    box-shadow: 0px 0px 5px #494949ab;
+}
+
+.header h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 40px;
+    user-select: none;
+}
+
+.header .search {
+    float: right;
+    text-align: center;
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+
+.header .search input {
+    border: 0px;
+    border-radius: 15px;
+    background-color: transparent;
+}
+
+.header .search input[type="text"] {
+    box-sizing: border-box;
+    border: 1px solid #acacac;
+    border-radius: 10px;
+    height: 30px;
+    width: 0px;
+    opacity: 0;
+    vertical-align: middle;
+    padding-left: 20px;
+    margin-right: 10px;
+    transition: all 0.4s ease;
+}
+
+.header .search input[type="text"]::placeholder {
+    font: 14px '微软雅黑';
+}
+
+.header .search input[type="button"] {
+    font-size: 26px;
+    line-height: 36px;
+    cursor: pointer;
+}
+
+.header .search input[type="text"]:focus {
+    outline: none;
+}
+
+.header .online {
+    position: relative;
+    float: right;
+    margin-right: 0px;
+    text-align: center;
+}
+
+.header .online button {
+    height: 40px;
+    padding: 3px 7px;
+    border-radius: 25px;
+    border: 0;
+    background-color: white;
+    cursor: pointer;
+}
+
+.header .online button.userEnterBtn {
+    background-color: #dddddd;
+    box-shadow: inset 0 3px 5px 0px rgb(0 0 0 / 18%);
+}
+
+.header .online button:hover {
+    background-color: #dddddd;
+}
+
+.header .online img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.header .online span {
+    vertical-align: middle;
+    margin-left: 6px;
+    margin-right: 5px;
+    font: 18px/24px "微软雅黑";
+    color: #111;
+}
+
+.header .online .select-menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    margin-top: 12px;
+    border-radius: 12px;
+    width: 160px;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 35%);
+}
+
+.header .online .select-menu li {
+    position: relative;
+    text-align: center;
+}
+
+.header .online .select-menu li:hover {
+    background-color: #e8ecf3;
+}
+
+.header .online .select-menu li a {
+    display: block;
+    padding: 8px 15px;
+}
+
+.header .online .select-menu li .iconfont {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header .online .select-menu li .text {
+    font-size: 16px;
+    margin-left: 32px;
+}
+
+.header .online .select-menu .separate {
+    padding: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #e8ecf3;
+}
+
+.header .not-login {
+    float: right;
+    margin-right: 45px;
+    width: 65px;
+    text-align: center;
+}
+
+.header .not-login ul {
+    width: 100px;
+    height: 40px;
+}
+
+.header .not-login li {
+    float: left;
+    line-height: 40px;
+    margin-right: 18px;
+}
+
+.header .not-login li a {
+    color: #333;
+    cursor: pointer;
+}
+
+.header .not-login li a:hover {
+    color: #667c99;
+}
+
+.header .not-login li .nav>ul {
+    margin-top: 100px;
+    text-align: center;
+}

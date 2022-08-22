@@ -1,0 +1,181 @@
+.ranking {
+    width: 1450px;
+    margin: 50px auto;
+    margin-bottom: 100px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #d7d7d7;
+}
+
+.ranking .person-head {
+    position: sticky;
+    top: 0px;
+    background-color: transparent;
+}
+
+.ranking .person-head,
+.ranking .person-data {
+    height: 44px;
+}
+
+.ranking .person-head th {
+    cursor: pointer;
+}
+
+.ranking .person-head th:active {
+    color: rgb(0, 132, 255);
+}
+
+.ranking .person-head th:nth-child(1) {
+    width: 70px;
+}
+
+.ranking .person-head th:nth-child(2),
+.ranking .person-head th:nth-child(3),
+.ranking .person-head th:nth-child(7),
+.ranking .person-head th:nth-child(8) {
+    width: 150px;
+}
+
+.ranking .person-head th:nth-child(4) {
+    width: 75px;
+}
+
+.ranking .person-head th:nth-child(5),
+.ranking .person-head th:nth-child(6),
+.ranking .person-head th:nth-child(9) {
+    width: 110px;
+}
+
+.ranking .person-head th:nth-child(10) {
+    width: 200px;
+}
+
+.ranking .person-head th:nth-child(11) {
+    width: 90px;
+}
+
+.ranking .person-head th:nth-child(12) {
+    width: 84px;
+}
+
+.ranking .person-head th img {
+    vertical-align: middle;
+    height: 24px;
+    width: 24px;
+    object-fit: contain;
+}
+
+.ranking .person-head th span {
+    vertical-align: middle;
+}
+
+.ranking .person-head th span.sort {
+    display: none;
+    font-size: 18px;
+}
+
+.ranking .person-head th:hover span.sort {
+    display: inline;
+}
+
+.ranking .person-data:nth-child(1) td,
+.ranking .person-data:nth-child(1) td>a,
+.ranking .person-data:nth-child(1) td>span {
+    color: red !important;
+}
+
+.ranking .person-data:nth-child(2) td,
+.ranking .person-data:nth-child(2) td>a,
+.ranking .person-data:nth-child(2) td>span {
+    color: blue !important;
+}
+
+.ranking .person-data:nth-child(3) td,
+.ranking .person-data:nth-child(3) td>a,
+.ranking .person-data:nth-child(3) td>span {
+    color: green !important;
+}
+
+.ranking .person-data td {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.ranking .person-data td.nickname {
+    text-align: left;
+}
+
+.ranking .person-data td.nickname img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 2px;
+    box-shadow: 0px 1px 2px #8b8b8b57;
+}
+
+.ranking .person-data td.nickname span {
+    vertical-align: middle;
+}
+
+.ranking .person-data td:last-of-type {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.ranking .person-data td a {
+    color: black;
+}
+
+.ranking .person-data td span.like {
+    font-size: 22px;
+}
+
+.ranking .person-data td span {
+    font-size: 18px;
+    vertical-align: sub;
+    cursor: pointer;
+}
+
+#retTop {
+    display: none;
+    position: fixed;
+    left: 50%;
+    margin-left: 725px;
+    bottom: 130px;
+    width: 40px;
+    height: 80px;
+    padding: 4px 8px;
+    border: 0px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 10px #d7d7d7;
+}
+
+#retTop:active {
+    background-color: aqua;
+}
+
+#retTop img {
+    width: 90%;
+}
+
+.about {
+    margin: 0px auto;
+    width: 1450px;
+    color: #3c763d;
+    background-color: #dff0d8;
+    padding: 20px 36px;
+    box-sizing: border-box;
+    border: 1px solid #d0ebba;
+    border-radius: 20px;
+    line-height: 1.8;
+    box-shadow: 0px 0px 10px #d7d7d7;
+}
+
+.about ul li {
+    list-style: inside;
+    margin-left: 40px;
+    font: 16px/1.8 "微软雅黑";
+}

@@ -1,0 +1,53 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    /* 还是为了照顾IE6，7 */
+    *zoom: 1;
+}
+
+body {
+    background-color: #ebebeb;
+}
+
+.show {
+    position: relative;
+    width: 1600px;
+    margin: 0px auto;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('/style/font/iconfont.woff2?t=1659884892355') format('woff2'),
+        url('/style/font/iconfont.woff?t=1659884892355') format('woff'),
+        url('/style/font/iconfont.ttf?t=1659884892355') format('truetype');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 36px;
+    font-style: normal;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

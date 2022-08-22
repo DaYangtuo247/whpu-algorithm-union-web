@@ -1,0 +1,75 @@
+.show {
+    width: 1600px;
+}
+
+.site-title {
+    text-align: center;
+    line-height: 2;
+}
+
+.edit {
+    box-sizing: border-box;
+    margin: 0px auto;
+    width: 1600px;
+    height: 800px;
+    border-radius: 40px;
+    overflow: hidden;
+    background-color: white;
+    padding: 40px 70px;
+    box-shadow: 0px 0px 10px #d7d7d7;
+}
+
+.edit .head{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 22px;
+}
+
+.edit .head input[id="title"],
+.edit .head input[id="tag-title"] {
+    box-sizing: border-box;
+    float: right;
+    width: 800px;
+    height: 40px;
+    font: 18px "微软雅黑";
+    font-weight: 700;
+    padding-left: 18px;
+    border: 0px;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+}
+
+.edit .head input[id="tag-title"]{
+    float: left;
+    width: 200px;
+}
+
+#test-editor {
+    border-radius: 12px;
+}
+
+#retForm,
+#submit {
+    float: right;
+    height: 40px;
+    font: 18px "微软雅黑";
+    font-weight: 600;
+    border-radius: 14px;
+    border: 0px;
+    cursor: pointer;
+    padding: 0px 28px;
+}
+
+#retForm:hover,
+#submit:hover{
+    background-color: #d7d7d7;
+}
+
+#retForm:active,
+#submit:active{
+    box-shadow: inset 0 3px 5px 0px rgb(0 0 0 / 18%);
+}
+
+#retForm {
+    float: left;
+}

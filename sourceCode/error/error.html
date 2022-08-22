@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>找不到页面</title>
+</head>
+
+<body>
+    <main class="main">
+        <section class="home">
+            <div class="home__container container">
+                <div class="home__data">
+                    <h1 class="home__title">页面丢失</h1>
+                    <p class="home__description">
+                        您要寻找的页面不存在
+                    </p>
+                    <a onclick="retGo()" class="home__button" id="skip" style="cursor: pointer;">返回上一页</a>
+                </div>
+
+                <div class="home__img">
+                    <img src="assets/img/ghost-img.png" alt="">
+                    <div class="home__shadow"></div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <script>
+        if (window.history.length == 1) {
+            let skip = document.getElementById('skip');
+            skip.innerHTML = '返回主页';
+        }
+        function retGo() {
+            if (window.history.length == 1) {
+                location.href = '/index.php';
+            } else {
+                window.history.go(-1);
+            }
+        }
+    </script>
+</body>
+
+</html>

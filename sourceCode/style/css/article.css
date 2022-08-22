@@ -1,0 +1,667 @@
+html {
+    /* 保证瞄点定位时的的偏移量 */
+    /* 任然保留该代码的原因在于在用户手动url输入锚点时跳转不会被header栏遮挡 */
+    scroll-padding-top: 80px;
+}
+
+.header .retprev {
+    position: absolute;
+    left: -60px;
+    margin-top: 2px;
+    height: 40px;
+    color: #333;
+    cursor: pointer;
+    user-select: none;
+}
+
+.header .retprev:hover {
+    color: #5684c5;
+}
+
+.show .article-show {
+    position: relative;
+    margin-top: 50px;
+}
+
+.show .article-show .module {
+    position: absolute;
+    right: 0;
+    width: 360px;
+}
+
+.show .article-show .author {
+    padding: 15px 30px 20px;
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+    box-shadow: 0px 0px 10px #d7d7d7;
+}
+
+.show .article-show .author img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.show .article-show .author .username {
+    font: 18px "微软雅黑";
+    text-shadow: 0px 0px 10px #d7d7d7;
+    font-weight: 700;
+}
+
+.show .article-show .author ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.show .article-show .author ul li {
+    float: left;
+    margin-right: 40px;
+}
+
+.show .article-show .author ul li:last-of-type {
+    margin-right: 0px;
+}
+
+.show .article-show .author ul li .iconfont {
+    font-size: 20px;
+}
+
+.show .article-show .article-toc {
+    position: sticky;
+    top: 100px;
+    right: 0px;
+    max-height: 750px;
+    overflow: auto;
+    padding: 5px 30px 20px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px #d7d7d7;
+}
+
+.show .article-show .article-toc h3 {
+    text-align: center;
+    margin: 5px auto;
+    user-select: none;
+}
+
+.show .article-show .article-toc-content li {
+    position: relative;
+    user-select: none;
+    margin-left: 15px;
+}
+
+.article-toc::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* 滚动条轨道 */
+.article-toc::-webkit-scrollbar-track {
+    background: #cccccc;
+    border-radius: 0px 5px 5px 0px;
+}
+
+/* 小滑块 */
+.article-toc::-webkit-scrollbar-thumb {
+    background: rgba(95, 95, 95, 0.3);
+    border-radius: 10px;
+}
+
+.article-toc::-webkit-scrollbar-thumb:hover {
+    background: #8a8a8a;
+}
+
+.article-toc-content ul {
+    border-left: 2px solid #97979773;
+}
+
+.article-toc-content li a {
+    position: relative;
+    color: black;
+    display: block;
+    padding: 6px 15px;
+}
+
+.article-toc-content li a:hover {
+    background-color: #f1f1f1d6;
+    border-radius: 8px;
+}
+
+.article-toc-content li a:active {
+    box-shadow: inset 0 3px 5px 0px rgb(0 0 0 / 18%);
+}
+
+.article-toc-content li a.active {
+    color: #007fff;
+    font-weight: 700;
+}
+
+.article-toc-content li a.active::before {
+    content: "";
+    position: absolute;
+    left: -19px;
+    top: 50%;
+    display: block;
+    width: 6px;
+    height: 22px;
+    transform: translateY(-50%);
+    background-color: #007fff;
+    border-radius: 2px;
+}
+
+.article-toc-content i.fold-toc {
+    display: block;
+    position: absolute;
+    right: 5px;
+    top: 17px;
+    opacity: 0.3;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 2;
+    transform: translateY(-50%) rotate(0deg);
+}
+
+.article-toc-content i.fold-toc:hover {
+    opacity: 1;
+}
+
+.article-toc-content i.reserve {
+    color: #007fff;
+    opacity: 1;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.show .article-show #article-content {
+    position: relative;
+    width: 1000px;
+    padding: 25px 100px 50px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px #d7d7d7;
+    margin-bottom: 45px;
+    background-color: white;
+}
+
+#article-content .editArticle {
+    position: absolute;
+    right: 34px;
+    color: #00000073;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#article-content .editArticle:hover {
+    color: #ff1744;
+}
+
+#article-content .articleinfo {
+    float: right;
+    color: #727272;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+#article-content .articleinfo li {
+    float: left;
+    list-style: none;
+    margin-left: 12px;
+}
+
+#article-content .articleinfo li#exist-modify {
+    cursor: pointer;
+}
+
+#article-content .articleinfo li#exist-modify div {
+    cursor: initial;
+    display: none;
+    position: absolute;
+    width: 206px;
+    text-align: center;
+    border: 1px solid #ffffff;
+    margin-top: 12px;
+    margin-left: -63px;
+    padding: 5px 8px;
+    border-radius: 6px;
+    background-color: white;
+    filter: drop-shadow(0px 0px 3px #8f8f8f);
+}
+
+#article-content .articleinfo li#exist-modify:hover div {
+    display: block;
+}
+
+#article-content .articleinfo li#exist-modify div span:not(.amend) {
+    position: absolute;
+    display: block;
+    top: -20px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+    border: 10px solid transparent;
+    border-bottom: 10px solid white;
+    transform: translateX(-50%);
+}
+
+#article-content pre .copycode {
+    display: none;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    color: #333;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: 1px solid rgb(203 203 203 / 47%);
+    transition: all 0.2s;
+}
+
+#article-content pre:hover .copycode {
+    display: block;
+}
+
+#article-content pre .copycode::after {
+    content: attr(result);
+}
+
+.article-show .comment-reply {
+    position: relative;
+    width: 1100px;
+    padding: 25px 50px 50px;
+    margin-bottom: 45px;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 0px 0px 10px #d7d7d7;
+}
+
+.article-show .comment-reply .show-comment-editor-area {
+    position: absolute;
+    top: 30px;
+    right: 60px;
+    cursor: pointer;
+}
+
+.article-show .comment-reply .show-comment-editor-area:hover {
+    text-decoration: underline;
+}
+
+.article-show .comment-reply h2.comment-reply-title {
+    margin-bottom: 15px;
+}
+
+.article-show .comment-reply #add-comment {
+    border-radius: 15px;
+}
+
+.comments {
+    width: 100%;
+    min-height: 140px;
+}
+
+.comments .comment {
+    position: relative;
+    min-height: 120px;
+    padding: 8px 0px;
+    padding-left: 132px;
+    border-top: 1px solid #e3e3e3;
+}
+
+.comments .comment .headimg {
+    position: absolute;
+    left: 40px;
+    top: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.comments .comment .comment-data {
+    position: relative;
+    min-height: 120px;
+}
+
+.comments .comment .comment-data .comment-data-user a,
+.comments .comment .reply-data .reply-data-user a {
+    color: #007fff;
+}
+
+.comments .comment .comment-data .comment-data-user a:hover,
+.comments .comment .reply-data .reply-data-user a:hover {
+    text-decoration: underline;
+}
+
+.comment .comment-data .comment-data-time {
+    font: 16px "微软雅黑";
+    margin-left: 15px;
+}
+
+.comment .comment-data .comment-data-content,
+.reply .reply-data .reply-data-content {
+    display: flex;
+    align-items: center;
+    width: auto;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 12px 20px 26px;
+}
+
+.comment .comment-data .comment-data-module,
+.reply .reply-data .comment-reply-submit {
+    position: absolute;
+    bottom: 2px;
+    right: 0px;
+    font-size: 16px;
+}
+
+.comment .comment-data .comment-data-module li,
+.reply .reply-data .comment-reply-submit {
+    display: flex;
+    align-items: center;
+    float: left;
+    margin: 0px 8px;
+    padding: 2px 4px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.comment .comment-data .comment-data-module li.active {
+    color: #007fff;
+    font-weight: 600;
+}
+
+.comment .comment-data .comment-data-module span.iconfont,
+.reply .reply-data .comment-reply-submit span.iconfont {
+    font-size: 18px;
+    margin-right: 3px;
+}
+
+.comment .comment-data .comment-data-module li:hover,
+.reply .reply-data .comment-reply-submit:hover {
+    color: #007fff;
+}
+
+.comment .comment-data .comment-data-module .comment-unlike-reverse {
+    transform: rotate(180deg) translateY(-1px);
+}
+
+.comment-reply .scroll-comment-editor {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #007fff;
+    font-size: 18px;
+}
+
+.comment-reply .scroll-comment-editor:active {
+    color: #ff0000;
+}
+
+.comment-reply .scroll-comment-editor .iconfont {
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+.comment-reply .reply-area {
+    background-color: #f7f8fa;
+    border: 1px solid #ebebeb;
+    border-radius: 6px;
+    padding: 5px 15px;
+}
+
+.comment-reply .replys .reply {
+    position: relative;
+    border-bottom: 1px dotted #a5a5a5;
+    padding: 8px 10px;
+    padding-left: 60px;
+    height: 85px;
+}
+
+.comment-reply .replys .reply:last-child {
+    border: 0px;
+}
+
+.comment-reply .replys .reply .reply-data-time {
+    font-weight: 400;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.comment-reply .replys .reply .headImg {
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.comment-reply .replys .reply .comment-reply-submit {
+    display: none;
+    transform: translateY(-50%);
+    margin-right: 25px;
+    animation: fadeOut 0.4s;
+}
+
+.comment-reply .replys .reply:hover .comment-reply-submit {
+    display: block;
+}
+
+.comment-reply .reply-module {
+    position: relative;
+    margin: 15px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.comment-reply .reply-module .reply-editor {
+    min-height: 100px;
+    border: 1px solid #007fff;
+    border-radius: 8px 8px 0px 0px;
+    resize: vertical;
+    overflow: auto;
+    padding: 8px;
+    font-size: 17px;
+    line-height: 23px;
+}
+
+.comment-reply .reply-module .reply-editor:focus {
+    position: relative;
+    z-index: 1;
+    outline: none;
+    box-shadow: 0px 0px 5px 0px #007fff8a;
+}
+
+.comment-reply .reply-module .reply-editor span {
+    color: #007fff;
+}
+
+.comment-reply .reply-module .reply-editor .emoji_icon {
+    vertical-align: middle;
+}
+
+.comment-reply .reply-data-content .emoji_icon {
+    vertical-align: middle;
+    max-width: 32px;
+    max-height: 32px;
+    object-fit: cover;
+}
+
+.comment-reply .reply-module ul.reply-extension {
+    height: 30px;
+    border: 1px solid #007fff;
+    border-top: 0px;
+    overflow: hidden;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.comment-reply .reply-module li {
+    line-height: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #007fff;
+    user-select: none;
+}
+
+.comment-reply .reply-module li:hover {
+    background-color: #007fff12;
+}
+
+.comment-reply .reply-module .reply-module-emoji,
+.comment-reply .reply-module .reply-module-at {
+    float: left;
+    border-right: 1px solid #007fff;
+    padding: 0px 15px;
+}
+
+.comment-reply .reply-module .reply-submit {
+    float: right;
+    border-left: 1px solid;
+    padding: 0px 25px;
+}
+
+.comment-editor-area {
+    display: block;
+    height: 608px;
+    padding-top: 20px;
+    border-top: 1px dotted #b9b9b9;
+}
+
+.comment-editor-area #comment-editor-submit {
+    float: right;
+    width: 110px;
+    height: 40px;
+    font: 18px "微软雅黑";
+    font-weight: 600;
+    border-radius: 14px;
+    border: 0px;
+    cursor: pointer;
+}
+
+.comment-editor-area #comment-editor-submit:hover {
+    background-color: #d7d7d7;
+}
+
+.comment-editor-area #comment-editor-submit:active {
+    box-shadow: inset 0 3px 5px 0px rgb(0 0 0 / 18%);
+}
+
+.aside {
+    position: fixed;
+    left: 50%;
+    top: 430px;
+    padding: 10px 0px;
+    margin-left: 850px;
+}
+
+.aside a {
+    display: block;
+    width: 55px;
+    line-height: 55px;
+    color: #007fff;
+    height: 55px;
+    border-radius: 50%;
+}
+
+.aside li {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: white;
+    margin-bottom: 14px;
+    box-shadow: 0px 0px 10px #d7d7d7;
+    cursor: pointer;
+    color: #007fff;
+    user-select: none;
+}
+
+.aside li div[class$="count"] {
+    position: absolute;
+    top: -8px;
+    left: 38px;
+    font-size: 15px;
+    padding: 2px 8px;
+    color: white;
+    border-radius: 8px 8px 8px 0px;
+    background: #007fff;
+    line-height: initial;
+}
+
+.aside li:hover {
+    background-color: #f6f6f6;
+}
+
+.aside li:active,
+.aside li:active a {
+    color: #ff0000;
+    box-shadow: inset 0 3px 5px 0px rgb(0 0 0 / 18%);
+}
+
+.aside li div.qrcode {
+    position: absolute;
+    left: -170px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 12px;
+    background: white;
+    filter: drop-shadow(0px 0px 10px #d7d7d7);
+}
+
+.aside li div.qrcode span {
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: -26px;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+    border: 13px solid transparent;
+    border-left: 13px solid white;
+    transform: translateY(-50%);
+}
+
+.aside li.copyUrl:hover div.qrcode {
+    display: flex;
+}
+
+.aside li p {
+    font-size: 14px;
+    font-size: 24px;
+}
+
+.aside .iconfont {
+    font-size: 26px;
+}
+
+#retTop img {
+    width: 90%;
+}
