@@ -184,8 +184,10 @@ E:\xampp\php\php.exe -f "E:\algorithmUnionWeb\control\heartbeat.php" -- -arg1 -a
 * [workerman](https://github.com/walkor/workerman)
 * [Editor.md](https://github.com/pandao/editor.md)
 * [coco-message](https://github.com/TheWindRises-2/coco-message)
+* [jQuery](https://github.com/jquery/jquery)
 * [jQuery-emoji](https://github.com/eshengsky/jQuery-emoji)
 * [HappyImage](https://github.com/liumingmusic/HappyImage)
+* [moment](https://github.com/moment/moment)
 
 
 
